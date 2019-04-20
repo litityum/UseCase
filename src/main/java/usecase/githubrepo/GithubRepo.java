@@ -1,13 +1,19 @@
 package usecase.githubrepo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "GithubRepos")
 public class GithubRepo {
 	@Id
+	@Column(name ="ID_REPO")
 	private String id;
+	@Column(name ="Repo_Name")
 	private String name;
+	@Column(name = "Owner_Name")
 	private String owner;
 	
 	public GithubRepo() {
